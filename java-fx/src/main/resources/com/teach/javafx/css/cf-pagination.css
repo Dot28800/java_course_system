@@ -1,0 +1,35 @@
+
+@import "cf-colors.css";
+
+.cf-pagination > .container, .cf-pagination > .container > .pager-box{
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+.cf-pagination > .container .pagination-label{
+    -fx-background-insets: 0;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-background-color:rgb(240, 242, 245);
+    -fx-pref-height: 32px;
+    -fx-min-width: 32px;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: -cf-text-color;
+    -fx-padding: 0 4px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+.cf-pagination > .container .pagination-label > .ikonli-font-icon{
+    -fx-icon-size: 14px;
+    -fx-icon-color: -cf-text-color;
+}
+.cf-pagination > .container .pagination-label:hover{
+    -fx-text-fill: -cf-primary-color;
+}
+.cf-pagination > .container .pagination-label:hover > .ikonli-font-icon{
+    -fx-icon-color: -cf-primary-color;
+}
+.cf-pagination > .container .pagination-label:active{
+    -fx-text-fill: rgb(255,255,255);
+    -fx-background-color: -cf-primary-color;
+}

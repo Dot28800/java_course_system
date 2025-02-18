@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.StudentCourseSelectController">
+    <center>
+        <TableView fx:id="dataTableView" prefHeight="200.0" prefWidth="949.0" stylesheets="@../css/table.css" BorderPane.alignment="CENTER">
+            <columns>
+                <!--TableColumn prefWidth="432.9999771118164" text="课程信息">
+                    <columns-->
+                        <TableColumn fx:id="courseNumColumn" prefWidth="76.66665399074554" text="课序号" />
+                        <TableColumn fx:id="courseNameColumn" prefWidth="77.9999771118164" text="课程名称" />
+                        <TableColumn fx:id="creditColumn" prefWidth="67.0" text="所占学分" />
+            <TableColumn fx:id="timeColumn" prefWidth="76.66668701171875" text="总学时" />
+                        <TableColumn fx:id="typeColumn" prefWidth="84.0" text="类别" />
+                        <TableColumn fx:id="examColumn" prefWidth="65.6666259765625" text="考核方式" />
+            <TableColumn fx:id="positionColumn" prefWidth="116.33331298828125" text="上课地点" />
+            <TableColumn fx:id="preCourseColumn" prefWidth="92.00006103515625" text="前序课" />
+            <TableColumn fx:id="resourseColumn" prefWidth="156.6666259765625" text="参考资料" />
+                    <!--/columns>
+                </TableColumn-->
+                <TableColumn minWidth="0.0" prefWidth="193.0" text="操作">
+                    <columns>
+                        <TableColumn fx:id="selectColumn" prefWidth="75.99993896484375" text="选课" />
+                        <TableColumn fx:id="deleteColumn" prefWidth="75.3333740234375" text="退课" />
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox prefHeight="28.0" prefWidth="1067.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane visible="false">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.33332951863608" minWidth="10.0" prefWidth="63.333333333333336" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.99999809265137" minWidth="10.0" prefWidth="137.33333333333334" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="课程名称" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="inputCourseComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="授课教师" GridPane.rowIndex="2" />
+                        <TextField fx:id="inputTeacher" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+            </children></HBox>
+    </bottom>
+    <top>
+        <GridPane prefHeight="52.0" prefWidth="1067.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.33331298828125" minWidth="0.0" prefWidth="11.199983596801758" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.6666666666666" minWidth="10.0" prefWidth="35.666666666666664" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="732.3999328613281" minWidth="10.0" prefWidth="103.66667429606119" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1003.0000063578286" minWidth="10.0" prefWidth="917.666659037272" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="25.599996948242186" minHeight="10.0" prefHeight="13.59999599456787" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="56.800003051757805" minHeight="10.0" prefHeight="28.600003051757817" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="46.39999618530273" minHeight="10.0" prefHeight="13.39999694824219" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <children>
+                  <AnchorPane prefHeight="28.0" prefWidth="779.0">
+                     <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-82.0" layoutY="2.0" mnemonicParsing="false" onAction="#onQuerySCButtonClick" prefHeight="23.0" prefWidth="189.0" styleClass="green-theme" stylesheets="@../css/button.css" text="查询已选课程" textAlignment="CENTER" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="177.0" layoutY="2.0" mnemonicParsing="false" onAction="#onQueryNoSCButtonClick" prefHeight="23.0" prefWidth="152.0" styleClass="green-theme" stylesheets="@../css/button.css" text="过滤已选课程" textAlignment="CENTER" />
+                        <Button layoutX="414.0" layoutY="2.0" mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="23.0" prefWidth="123.0" stylesheets="@../css/button.css" text="所有课程" />
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </HBox>
+                <HBox prefHeight="34.0" prefWidth="855.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label contentDisplay="CENTER" prefHeight="26.0" prefWidth="66.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <cursor>
+                          <Cursor fx:constant="MOVE" />
+                      </cursor>
+                  </Label>
+            </children>
+        </GridPane>
+    </top>
+</BorderPane>

@@ -1,0 +1,8 @@
+.add{
+    -fx-background-color: #E5E5E5;
+    -fx-border-color: #4F4F4F;
+    -fx-border-width:2px;
+    -fx-border-radius: 2px 2px 2px 2px;
+    -fx-background-radius:2px 2px 2px 2px;
+
+}

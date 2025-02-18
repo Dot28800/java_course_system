@@ -1,0 +1,22 @@
+
+@import "cf-colors.css";
+
+.main{
+    -fx-padding: 15px;
+    -fx-background-color: rgb(255,255,255);
+}
+.main .close{
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+    -fx-padding:0;
+}
+.main .close > .ikonli-font-icon{
+    -fx-icon-size: 16px;
+    -fx-icon-color: -cf-text-color;
+}
+.main .close:hover > .ikonli-font-icon{
+    -fx-icon-size: 16px;
+    -fx-icon-color: -cf-primary-color;
+}

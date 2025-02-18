@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" stylesheets="@../css/general-format.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.HomeworkTableController">
+   <top>
+      <GridPane prefHeight="90.0" prefWidth="399.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.33333333333331" minWidth="10.0" prefWidth="108.33333333333333" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.00000381469727" minWidth="0.0" prefWidth="139.66666666666669" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="2.666666666666657" prefWidth="10.999999999999972" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="0.0" prefWidth="113.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="10.0" prefWidth="143.33333333333331" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="10.0" prefWidth="112.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="10.0" prefWidth="164.33333333333337" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.33331807454425" minWidth="10.0" prefWidth="107.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="请选择学生" GridPane.rowIndex="1" />
+            <Label text="请选择课程" GridPane.rowIndex="2" />
+            <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="courseComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="19.0" prefWidth="101.0" text="查询功能区域" />
+            <Button alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="30.0" prefWidth="117.0" styleClass="btn-basic,green-theme,btn-radius-normal" text="马上查找" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onNewButtonClick" prefHeight="23.0" prefWidth="155.0" styleClass="btn-basic,red-time,btn-radius-normal" text="新建记录" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label text="选择学生" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="选择课程" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="输入布置时间" GridPane.columnIndex="5" />
+            <ComboBox fx:id="inputStudentComboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ComboBox fx:id="inputCourseComboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label prefHeight="19.0" prefWidth="102.0" text="输入作业分数" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="inputMark" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label text="新建记录区域" GridPane.columnIndex="3" />
+            <DatePicker fx:id="timePicker" GridPane.columnIndex="6" />
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="310.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="studentNumColumn" prefWidth="86.3333410024643" text="学生学号" />
+          <TableColumn fx:id="studentNameColumn" prefWidth="82.66666412353516" text="学生姓名" />
+            <TableColumn fx:id="courseNumColumn" prefWidth="65.33331298828125" text="课程号" />
+            <TableColumn fx:id="courseNameColumn" prefWidth="67.33335876464844" text="课程名" />
+            <TableColumn fx:id="timeColumn" prefWidth="88.3333740234375" text="布置时间" />
+            <TableColumn fx:id="markColumn" prefWidth="62.33331298828125" text="作业分数" />
+            <TableColumn prefWidth="75.0" text="操作">
+               <columns>
+                  <TableColumn fx:id="editColumn" prefWidth="75.0" text="编辑" />
+                  <TableColumn fx:id="deleteColumn" prefWidth="75.0" text="删除" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

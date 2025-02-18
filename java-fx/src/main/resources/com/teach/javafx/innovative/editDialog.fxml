@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.InnovativeEditController">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.66665649414062" minWidth="10.0" prefWidth="49.000003814697266" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.6666717529297" minWidth="10.0" prefWidth="166.99999618530273" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0000305175781" minWidth="10.0" prefWidth="249.66664632161462" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.3333740234375" minWidth="10.0" prefWidth="214.6666259765625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.99991861979163" minWidth="10.0" prefWidth="252.3333740234375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="35.33341471354163" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.333251953125" minWidth="0.0" prefWidth="0.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="选定学生" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label text="荣誉名称" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label text="获奖时间" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label contentDisplay="CENTER" text="颁奖单位" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label contentDisplay="CENTER" text="级别" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label text="类型" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="titleField" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="hostField" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="typeField" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <DatePicker fx:id="timePicker" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                <Button onAction="#okButtonClick" mnemonicParsing="false" text="确定" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Button onAction="#cancelButtonClick" mnemonicParsing="false" text="取消" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Label text="在这里修改学生的信息" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="levelBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

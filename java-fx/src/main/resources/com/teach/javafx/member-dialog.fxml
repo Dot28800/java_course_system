@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.MemberDialogController">
+   <children>
+      <GridPane layoutX="134.0" layoutY="97.0" prefHeight="180.0" prefWidth="337.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="9.0" prefWidth="9.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="191.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="输入学生学号/姓名" />
+            <TextField fx:id="studentNumName" GridPane.columnIndex="2" />
+            <Label text="家长姓名" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="年龄" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="关系" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="性别" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label text="职业" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <ComboBox fx:id="genderBox" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="nameField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="ageField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="relationField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="jobField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Button onAction="#okButtonClick" layoutX="143.0" layoutY="307.0" mnemonicParsing="false" text="确定" />
+      <Button onAction="#cancelButtonClick" layoutX="375.0" layoutY="307.0" mnemonicParsing="false" text="取消" />
+      <Label layoutX="89.0" layoutY="25.0" text="在这里录入家长的信息吧">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

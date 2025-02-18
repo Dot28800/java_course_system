@@ -1,0 +1,164 @@
+
+@import "cf-colors.css";
+
+.h1,.h2,.h3,.h4,.h5,.h6{
+    /* normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 */
+    -fx-font-weight: bold;
+    -fx-text-fill: -cf-text-color;
+}
+.h1 {
+    -fx-font-size: 32px;
+}
+.h2 {
+    -fx-font-size: 24px;
+}
+.h3 {
+    -fx-font-size: 18.72px;
+}
+.h4 {
+    -fx-font-size: 16px;
+}
+.h5 {
+    -fx-font-size: 13.28px;
+}
+.h6 {
+    -fx-font-size: 12px;
+}
+.text-default, .text-small{
+    -fx-text-fill: -cf-text-color;
+}
+.text-default{
+    -fx-font-size: 14px;
+}
+.text-small{
+    -fx-font-size: 12px;
+}
+
+.cf-link{
+    -fx-border-width:0;
+    -fx-font-size:14px;
+    -fx-text-fill: -cf-text-color;
+    -fx-underline: false;
+}
+.cf-link:hover{
+    -fx-underline: true;
+}
+.cf-link.primary{-fx-text-fill: -cf-primary-color;}
+.cf-link.success{-fx-text-fill: -cf-success-color;}
+.cf-link.info{-fx-text-fill: -cf-info-color;}
+.cf-link.warn{-fx-text-fill: -cf-warn-color;}
+.cf-link.danger{-fx-text-fill: -cf-danger-color;}
+
+.cf-tooltip{
+    -fx-font-size: 12px;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+    -fx-padding: 5px;
+}
+.cf-tooltip.light{
+    -fx-background-color:rgb(255,255,255);
+    -fx-text-fill: -cf-text-color;
+}
+.cf-tooltip.dark{
+    -fx-background-color: -cf-text-color;
+    -fx-text-fill:rgb(255,255,255);
+}
+
+.cf-separator:horizontal > .line {
+/*    -fx-background-color: null;
+    -fx-padding: 0.083333em 0.0em 0.0em 0.0em; *//* 1 0 0 0 */
+    -fx-border-color: -cf-border-color transparent transparent transparent;
+}
+
+.cf-separator:vertical > .line {
+/*    -fx-background-color: null;
+    -fx-padding: 0.0em 0.083333em 0.0em 0.0em; *//* 0 1 0 0 */
+    -fx-border-color:  transparent -cf-border-color transparent transparent;
+}
+
+.cf-message{
+    -fx-alignment: center-left;
+    -fx-min-height: 40px;
+    -fx-graphic-text-gap: 8px;
+    -fx-padding: 0 10px;
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius:3px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10.0, 0, 0, 0);
+    -fx-text-fill: -cf-text-color;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+}
+.cf-message > .ikonli-font-icon{
+    -fx-icon-color: -cf-primary-color;
+    -fx-icon-size: 18px;
+}
+.cf-message.success  > .ikonli-font-icon{-fx-icon-color: -cf-success-color;}
+.cf-message.info  > .ikonli-font-icon{-fx-icon-color: -cf-info-color;}
+.cf-message.warn  > .ikonli-font-icon{-fx-icon-color: -cf-warn-color;}
+.cf-message.danger  > .ikonli-font-icon{-fx-icon-color: -cf-danger-color;}
+
+
+/***********************************
+    ProgressBar 进度条样式
+***********************************/
+.cf-progress-bar,.cf-success-progress-bar,.cf-primary-progress-bar,.cf-info-progress-bar,.cf-warn-progress-bar,.cf-danger-progress-bar{
+    -fx-indeterminate-bar-length:70;
+    -fx-indeterminate-bar-animation-time:1.5;
+}
+.cf-progress-bar > .track,.cf-primary-progress-bar > .track,.cf-success-progress-bar > .track,
+.cf-info-progress-bar > .track,.cf-warn-progress-bar > .track,.cf-danger-progress-bar > .track{
+    -fx-background-color: -cf-base-color;
+    -fx-border-color: -cf-border-color;
+    -fx-border-radius: 3px;
+}
+.cf-progress-bar > .bar,.cf-primary-progress-bar > .bar,.cf-success-progress-bar > .bar,
+.cf-info-progress-bar > .bar,.cf-warn-progress-bar > .bar,.cf-danger-progress-bar > .bar{
+    -fx-pref-height: 6px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 3px;
+}
+.cf-progress-bar > .bar {-fx-background-color: -cf-text-color;}
+.cf-primary-progress-bar > .bar {-fx-background-color: -cf-primary-color;}
+.cf-success-progress-bar > .bar {-fx-background-color: -cf-success-color;}
+.cf-info-progress-bar > .bar {-fx-background-color: -cf-info-color;}
+.cf-warn-progress-bar > .bar {-fx-background-color: -cf-warn-color;}
+.cf-danger-progress-bar > .bar {-fx-background-color: -cf-danger-color;}
+
+
+/* 滚动条样式 */
+.scroll-bar-style{
+    -fx-padding:0;
+    -fx-background-insets:0;
+    -fx-background-color: transparent;
+}
+.scroll-bar-style > .viewport{
+    -fx-background-color: transparent;
+}
+.scroll-bar-style .scroll-bar{
+    /*-fx-block-increment:10000;*/
+    -fx-unit-increment:20;
+    -fx-background-color: transparent;
+}
+.scroll-bar-style .scroll-bar > .decrement-button,
+.scroll-bar-style .scroll-bar > .increment-button{
+    /*-fx-opacity:0;*/
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+}
+.scroll-bar-style .scroll-bar > .track{
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+}
+.scroll-bar-style .scroll-bar:vertical > .thumb, .scroll-bar-style .scroll-bar:horizontal > .thumb{
+    -fx-background-color: rgba(0,0,0,0.2);
+    -fx-border-color: transparent;
+    -fx-background-radius: 4px;
+}
+.scroll-bar-style .scroll-bar:vertical > .thumb{
+    -fx-pref-height: 8px;
+}
+.scroll-bar-style .scroll-bar:horizontal > .thumb{
+    -fx-pref-width: 8px;
+}
+.scroll-bar-style .scroll-bar:vertical > .thumb,.scroll-bar-style .scroll-bar:vertical > .track{}
+.scroll-bar-style .scroll-bar:horizontal > .thumb,.scroll-bar-style .scroll-bar:horizontal > .track{}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.ConsumptionTableController">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="740.0" prefWidth="548.0" BorderPane.alignment="CENTER">
+            <columns>
+                <!--TableColumn prefWidth="165.3333282470703" text="学生信息">
+                    <columns>
+
+
+                    </columns>
+                </TableColumn-->
+                <TableColumn fx:id="studentNameColumn" prefWidth="67.3333295583725" text="姓名" />
+                <TableColumn fx:id="studentNumColumn" prefWidth="99.99998474121094" text="学号" />
+                <TableColumn fx:id="consumePlaceColumn" prefWidth="89.33334350585938" text="消费地点" />
+                <TableColumn fx:id="moneyColumn" prefWidth="74.66665649414062" text="消费金额" />
+                <TableColumn fx:id="consumeTimeColumn" prefWidth="135.33331298828125" text="交易时间" />
+                <TableColumn fx:id="consumeReasonColumn" prefWidth="113.0" text="消费原因" />
+                <TableColumn prefWidth="238.33331298828125" text="消费记录信息">
+                    <columns>
+
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <top>
+        <GridPane prefHeight="60.0" prefWidth="827.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.00000762939453" minWidth="10.0" prefWidth="98.00000762939453" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.99999237060547" minWidth="10.0" prefWidth="145.99999237060547" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="864.0" minWidth="10.0" prefWidth="864.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.99999237060547" minWidth="0.0" prefWidth="12.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="查找区域" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="inputReasonComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+                <Button mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="26.0" prefWidth="125.0" styleClass="button" stylesheets="@../css/button_blue.css" text="查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+            <Pane prefHeight="30.0" prefWidth="446.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label layoutX="32.0" layoutY="8.0" text="亲爱的" />
+                  <Label fx:id="nameLabel" layoutX="91.0" layoutY="8.0" text="学生名" />
+                  <Label layoutX="127.0" layoutY="8.0" text="，这里是你的消费记录，请查收~" />
+               </children>
+            </AnchorPane>
+            </children>
+        </GridPane>
+    </top>
+   <right>
+      <AnchorPane prefHeight="745.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" text="消费的可视化信息" />
+            <BarChart fx:id="barChart" layoutX="31.0" layoutY="33.0" prefHeight="313.0" prefWidth="592.0" title="消费金额按类型分布柱状图">
+              <xAxis>
+                <CategoryAxis label="消费类型" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="消费金额" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <PieChart fx:id="pieChart" layoutX="52.0" layoutY="358.0" prefHeight="387.0" prefWidth="573.0" title="消费金额按类型分布扇形图" />
+            <Button layoutX="168.0" mnemonicParsing="false" onAction="#refresh" prefHeight="33.0" prefWidth="123.0" styleClass="button" stylesheets="@../css/button_purple.css" text="点击刷新图表" />
+            <Label layoutX="302.0" layoutY="14.0" text="当前消费总额：" />
+            <Label fx:id="sumLabel" layoutX="386.0" layoutY="14.0" text="总金额" />
+            <Label layoutX="430.0" layoutY="14.0" text="元" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

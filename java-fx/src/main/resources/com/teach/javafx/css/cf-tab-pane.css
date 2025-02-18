@@ -1,0 +1,74 @@
+
+@import "cf-colors.css";
+
+.cf-tab-pane{}
+.cf-tab-pane > .header{}
+.cf-tab-pane > .header > .roll-button{
+    -fx-background-insets: 0;
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius: 8px;
+    -fx-pref-height: 16px;
+    -fx-pref-width: 16px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 3.0, 0, 0, 0);
+    -fx-cursor:hand;
+    -fx-opacity: 0;
+}
+.cf-tab-pane > .header:hover > .roll-button{
+    -fx-opacity: 1;
+}
+.cf-tab-pane > .header > .roll-button > .ikonli-font-icon{
+    -fx-icon-size: 12px;
+    -fx-icon-color: -cf-text-color;
+}
+.cf-tab-pane > .header > .roll-button:hover > .ikonli-font-icon{
+    -fx-icon-color: -cf-primary-color;
+}
+.cf-tab-pane > .header > .container > .bar{
+    -fx-fill: -cf-border-color;
+}
+.cf-tab-pane > .header > .container > .active-bar{
+    -fx-fill: -cf-primary-color;
+}
+.cf-tab-pane > .header > .container > .tab-box{
+    -fx-pref-height: 40px;
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab > .tab-button{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-min-height: 40px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0px 30px 0px 20px;
+    -fx-font-size: 14px;
+    -fx-text-fill: -cf-text-color;
+    -fx-graphic-text-gap: 8px;
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab > .tab-button:selected{
+    -fx-text-fill: -cf-primary-color;
+    /*-fx-background-color: rgba(0,0,0,0.05);*/
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab:hover > .tab-button{
+    -fx-text-fill: -cf-primary-color;
+    -fx-background-color: rgba(0,0,0,0.05);
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab > .close-label{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 16px;
+    -fx-pref-width: 16px;
+    -fx-alignment: center;
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab > .close-label:hover{
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab > .close-label > .ikonli-font-icon{
+    -fx-icon-color: transparent;
+    -fx-icon-size: 10px;
+}
+.cf-tab-pane > .header > .container > .tab-box > .cf-tab:hover > .close-label > .ikonli-font-icon{
+    -fx-icon-color: -cf-text-color;
+}

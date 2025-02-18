@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@../css/general-format.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.PracticeTableController">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="209.3333181142807" text="学生信息">
+                    <columns>
+                        <TableColumn fx:id="studentNameColumn" prefWidth="79.3333410024643" text="姓名" />
+                        <TableColumn fx:id="studentNumColumn" prefWidth="122.00000762939453" text="学号" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="757.3334197998047" text="实践活动记录">
+                    <columns>
+                        <TableColumn fx:id="placeColumn" prefWidth="186.66664123535156" text="实践地点" />
+                        <TableColumn fx:id="timeColumn" prefWidth="162.00003051757812" text="实践时间" />
+                        <TableColumn fx:id="evaluationColumn" prefWidth="59.333404541015625" text="实践评价" />
+                        <TableColumn fx:id="typeColumn" prefWidth="71.33331298828125" text="实践类型" />
+                        <TableColumn fx:id="teamNameColumn" prefWidth="102.66668701171875" text="队伍名称" />
+                    </columns></TableColumn>
+                <TableColumn prefWidth="161.99981689453125" text="操作">
+                    <columns>
+                        <TableColumn fx:id="editColumn" prefWidth="86.0" text="编辑" />
+                        <TableColumn fx:id="deleteColumn" prefWidth="86.0" text="删除" />
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+    </center>
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="78.33333333333331" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.99999999999994" minWidth="10.0" prefWidth="102.33333333333337" />
+                <ColumnConstraints maxWidth="127.0" minWidth="50.333333333333314" prefWidth="73.33333333333331" />
+                <ColumnConstraints maxWidth="244.33333333333337" minWidth="116.0" prefWidth="133.0" />
+                <ColumnConstraints maxWidth="162.0" minWidth="62.0" prefWidth="75.33333333333337" />
+                <ColumnConstraints maxWidth="257.33333333333326" minWidth="193.33333333333326" prefWidth="257.33333333333326" />
+                <ColumnConstraints />
+                <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints maxWidth="59.33333333333326" minWidth="59.0" prefWidth="59.33333333333326" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label prefHeight="16.0" prefWidth="102.0" text="查找搜索区域" GridPane.halignment="CENTER" />
+            <Label text="请选择学生" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#onQueryButtonClick" styleClass="btn-radius-normal,green-theme" text="查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="新建实践经历" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Label text="队伍名称" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+            <Label text="实践时间" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="实践地点" GridPane.columnIndex="7" GridPane.halignment="CENTER" />
+            <Label text="实践类型" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="实践评价" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onNewButtonClick" styleClass="btn-basic,blue-theme,btn-radius-normal" text="新建" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <TextField fx:id="inputTeamName" GridPane.columnIndex="6" />
+            <TextField fx:id="inputEvaluation" prefHeight="29.0" prefWidth="210.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <TextField fx:id="inputType" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField fx:id="inputPlace" GridPane.columnIndex="8" />
+            <DatePicker fx:id="timePicker" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ComboBox fx:id="inputStudentComboBox" prefWidth="150.0" GridPane.columnIndex="4" />
+            <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+        </GridPane>
+    </top>
+</BorderPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.ScienceEditController">
+   <children>
+      <Label layoutX="130.0" layoutY="23.0" text="在这里编辑学生的科研信息吧">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="151.0" layoutY="93.0" prefHeight="141.0" prefWidth="283.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.66661071777344" minWidth="10.0" prefWidth="94.99999491373698" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.66668701171875" minWidth="2.3333536783854214" prefWidth="15.000040690104171" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.33329264322913" minWidth="10.0" prefWidth="170.33329264322913" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="请选择学生" GridPane.halignment="CENTER" />
+            <Label text="请修改项目名称" GridPane.rowIndex="1" />
+            <Label text="请修改项目成果" GridPane.rowIndex="2" />
+            <Label text="请修改指导老师" GridPane.rowIndex="3" />
+            <ComboBox fx:id="studentComboBox" prefHeight="23.0" prefWidth="169.0" GridPane.columnIndex="2" />
+            <TextField fx:id="projectNameField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="achievementField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="teacherNameField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button onAction="#okButtonClick" layoutX="191.0" layoutY="243.0" mnemonicParsing="false" text="确定" />
+      <Button onAction="#cancelButtonClick" layoutX="343.0" layoutY="243.0" mnemonicParsing="false" text="取消" />
+   </children>
+</AnchorPane>

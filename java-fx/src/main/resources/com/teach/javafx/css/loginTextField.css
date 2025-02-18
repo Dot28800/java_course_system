@@ -1,0 +1,10 @@
+.textField
+{
+-fx-background-color:transparent;
+-fx-border-color:rgb(5, 152, 255,0.5);
+-fx-border-width: 0px 0px 2px 0px;
+}
+.textField:focused
+{
+-fx-border-color:rgb(5, 152, 255);
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" stylesheets="@../css/general-format.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.CourseAttendanceController">
+   <top>
+      <HBox prefHeight="44.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="27.0" prefWidth="86.0" text="学生姓名">
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor></Label>
+            <ComboBox fx:id="studentComboBox" prefWidth="150.0" />
+            <Label contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="71.0" text="课程名称" />
+            <ComboBox fx:id="courseComboBox" prefHeight="23.0" prefWidth="105.0" />
+            <Button alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="27.0" prefWidth="108.0" styleClass="btn-basic,red-time,btn-radius-normal" text="查询记录" textAlignment="CENTER" />
+         </children></HBox>
+   </top>
+   <center>
+      <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="studentNumColumn" prefWidth="77.3333740234375" text="学号" />
+          <TableColumn fx:id="studentNameColumn" prefWidth="73.33331298828125" text="姓名" />
+            <TableColumn fx:id="courseNameColumn" prefWidth="104.0" text="课程名称" />
+            <TableColumn fx:id="timeColumn" prefWidth="92.00001525878906" text="上课时间" />
+            <TableColumn fx:id="flagColumn" prefWidth="85.3333740234375" text="到场情况" />
+            <TableColumn fx:id="editColumn" prefWidth="75.0" text="操作1" />
+            <TableColumn fx:id="deleteColumn" prefWidth="75.0" text="操作2" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.33332951863608" minWidth="10.0" prefWidth="63.333333333333336" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.99999809265137" minWidth="10.0" prefWidth="137.33333333333334" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="14.0" prefWidth="66.0" text="学号" />
+                  <Label text="课程名称" GridPane.rowIndex="1" />
+                  <Label text="上课时间" GridPane.rowIndex="2" />
+                  <Label text="到课情况" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="inputStudentComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="inputCourseComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="timePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="flagBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button styleClass="btn-basic,green-theme,btn-radius-normal" mnemonicParsing="false" onAction="#onNewButtonClick" text="点击新建" GridPane.rowIndex="1" />
+                  <Accordion GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children></HBox>
+   </bottom>
+</BorderPane>

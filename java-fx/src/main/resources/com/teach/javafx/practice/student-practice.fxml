@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.PracticeTableController">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="209.3333181142807" text="学生信息">
+                    <columns>
+                        <TableColumn fx:id="studentNameColumn" prefWidth="79.3333410024643" text="姓名" />
+                        <TableColumn fx:id="studentNumColumn" prefWidth="122.00000762939453" text="学号" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="606.6667022705078" text="实践活动记录">
+                    <columns>
+                        <TableColumn fx:id="placeColumn" prefWidth="186.66664123535156" text="实践地点" />
+                        <TableColumn fx:id="timeColumn" prefWidth="162.00003051757812" text="实践时间" />
+                        <TableColumn fx:id="evaluationColumn" prefWidth="59.333404541015625" text="实践评价" />
+                        <TableColumn fx:id="typeColumn" prefWidth="71.33331298828125" text="实践类型" />
+                        <TableColumn fx:id="teamNameColumn" prefWidth="102.66668701171875" text="队伍名称" />
+                    </columns></TableColumn>
+            </columns>
+        </TableView>
+
+    </center>
+   <top>
+      <AnchorPane prefHeight="73.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="亲爱的" />
+            <Label fx:id="studentNameLabel" layoutX="58.0" layoutY="14.0" text="学生名字" />
+            <Label layoutX="117.0" layoutY="14.0" text="同学，这里是你曾经参与的实践活动，您可以查看它们但很遗憾没有权利修改它们，如果有问题请联系管理员老师进行修改" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

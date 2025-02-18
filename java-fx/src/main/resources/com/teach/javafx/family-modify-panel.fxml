@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.FamilyMemberController">
+    <top>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+            <children>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            </children>
+
+        </HBox>
+    </top>
+    <center>
+        <SplitPane>
+            <items>
+                <TableView fx:id="dataTableView">
+                    <columns>
+
+                        <TableColumn fx:id="memberIdColumn" prefWidth="100.0" text="家长序号" />
+                        <TableColumn fx:id="studentIdColumn" prefWidth="70.0" text="学生序号" />
+                        <TableColumn fx:id="memberNameColumn" prefWidth="75.0" text="家长姓名" />
+                        <TableColumn fx:id="ageColumn" prefWidth="75.0" text="年龄" />
+                        <TableColumn fx:id="relationColumn" prefWidth="75.0" text="关系" />
+                        <TableColumn fx:id="genderColumn" prefWidth="55.0" text="性别" />
+                        <TableColumn prefWidth="75.0" text="操作" />
+
+
+
+                    </columns>
+                </TableView>
+            </items>
+        </SplitPane>
+    </center>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+
+            <GridPane hgap="10.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="67.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="193.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+                </rowConstraints>
+                <children>
+                    <Label text="家长序号" GridPane.rowIndex="0" />
+                    <TextField fx:id="memberIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Label text="学生序号" GridPane.rowIndex="1" />
+                    <TextField fx:id="studentIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Label text="家长姓名" GridPane.rowIndex="2" />
+                    <TextField fx:id="memberNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Label text="年龄" GridPane.rowIndex="3" />
+                    <TextField fx:id="ageField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="关系" GridPane.rowIndex="4" />
+                    <TextField fx:id="relationField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <!--Label text="性别" GridPane.rowIndex="5" />
+                    <ComboBox fx:id="genderComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5" /-->
+                    <Label text="性别" GridPane.rowIndex="5" />
+                    <TextField fx:id="genderField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                </children>
+            </GridPane>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="36.0">
+                <Button onAction="#onSaveButtonClick" text="保存" />
+            </FlowPane>
+        </VBox>
+    </left>
+</BorderPane>

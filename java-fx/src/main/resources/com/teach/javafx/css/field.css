@@ -1,0 +1,7 @@
+.field
+{
+-fx-background-color: linear-gradient(to right,blue,purple);[
+-fx-background-radius:20 20 20 20;
+-fx-border-radius:20 20 20 20;
+-fx-border-color: #0598ff;
+}

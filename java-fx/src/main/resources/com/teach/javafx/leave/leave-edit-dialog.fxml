@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.LeaveEditController">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.6666259765625" minWidth="10.0" prefWidth="67.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.66668701171875" minWidth="10.0" prefWidth="189.66668701171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.00009155273438" minWidth="10.0" prefWidth="144.66664632161462" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.3333740234375" minWidth="10.0" prefWidth="175.33341471354163" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="29.333251953125" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="164.00000762939453" minHeight="10.0" prefHeight="112.66667175292969" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="221.00001525878906" minHeight="10.0" prefHeight="158.00001525878906" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="276.6666564941406" minHeight="10.0" prefHeight="124.66665140787762" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="268.9999694824219" minHeight="10.0" prefHeight="120.6666259765625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="100.00005086263013" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="141.33331298828125" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="在此处修改学生信息" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="选定学生" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="离开时间" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="返校时间" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="请假原因" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="请假去向" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#okButtonClick" text="确定" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#cancelButtonClick" text="取消" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Label text="是否批准" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <ComboBox fx:id="flagComboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                <DatePicker fx:id="leaveTimePicker" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <DatePicker fx:id="returnTimePicker" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <TextField fx:id="leaveReasonField" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="destinationField" prefHeight="46.0" prefWidth="183.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </TextField>
+            </children>
+        </GridPane>
+    </top>
+</BorderPane>

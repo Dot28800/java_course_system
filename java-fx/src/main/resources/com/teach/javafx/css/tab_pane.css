@@ -1,0 +1,44 @@
+/* 修改TabPane的Pane区域背景颜色 */
+.tab-pane {
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 16px;
+    -fx-pref-width: 16px;
+    -fx-padding: 0;
+}
+/* 修改Tab的背景颜色 */
+.tab {
+    -fx-background-color: #333333;
+    -fx-background-radius: 0;
+    -fx-min-height: 40px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0px 30px 0px 20px;
+    -fx-font-size: 14px;
+    -fx-border-width: 0px;
+
+}
+/* 修改顶栏的背景颜色 */
+
+.tab-pane>*.tab-header-area>*.tab-header-background
+{
+    -fx-background-color:#333333;
+}
+/* 修改Tab中文本的颜色 */
+.tab-label {
+    -fx-text-fill: #e6e6e6;
+}
+/* 子代选择器，Tab选中的时候选择其子元素tab-label */
+.tab:selected .tab-label {
+    -fx-text-fill: #003333ff;
+}
+/* tab选中时设置背景颜色 */
+.tab:selected {
+    -fx-background-color: #990000ff;
+}
+/* Tab选中的时候选中其边框并修改样式 */
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-radius: 0px;
+    -fx-border-color: #4d1a4dff;
+}
+

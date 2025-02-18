@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<!-- 前端应用主框架FXML配置文件 对应页面交互控制类 com.teach.javafx.controller.base.MainFrameController -->
+
+<!--BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.base.MainFrameController">
+  <top>
+    <MenuBar fx:id="menuBar" />
+  </top>
+
+  <left>
+    <TreeView fx:id="menuTree" prefWidth="200" />
+  </left>
+  <center>
+    <TabPane fx:id="contentTabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+    </TabPane>
+  </center>
+  <bottom>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="亲爱的" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+            <Label fx:id="nameField" text="用户名字" />
+            <Label text="，欢迎您！" />
+            <Label text="当前时间：" />
+            <Label fx:id="timeField" prefHeight="15.0" prefWidth="119.0" text="时间" />
+
+        
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </bottom>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="57.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane-->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.base.MainFrameController">
+    <top>
+        <MenuBar fx:id="menuBar" styleClass="zkh_MenuBar" stylesheets="@../css/menu_bar.css" />
+    </top>
+
+    <left>
+        <TreeView fx:id="menuTree" prefWidth="200" />
+    </left>
+    <center>
+        <TabPane fx:id="contentTabPane" stylesheets="@../css/tab_pane.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        </TabPane>
+    </center>
+    <bottom>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="亲爱的" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Label fx:id="nameField" text="用户名字" />
+                <Label text="，欢迎您！" />
+                <Label text="当前时间：" />
+                <Label fx:id="timeField" prefHeight="15.0" prefWidth="119.0" text="时间" />
+
+
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="57.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>

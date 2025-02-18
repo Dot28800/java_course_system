@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.teach.javafx.controller.CompetitionTableController" stylesheets="@../css/button.css">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="209.3333181142807" text="学生信息">
+                    <columns>
+                        <TableColumn fx:id="studentNameColumn" prefWidth="79.3333410024643" text="姓名" />
+                        <TableColumn fx:id="studentNumColumn" prefWidth="122.00000762939453" text="学号" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="757.3334197998047" text="竞赛经历信息">
+                    <columns>
+                        <TableColumn fx:id="contestNameColumn" prefWidth="186.66664123535156" text="竞赛名称" />
+                        <TableColumn fx:id="prizeColumn" prefWidth="162.00003051757812" text="所获奖项" />
+                        <TableColumn fx:id="rankColumn" prefWidth="59.333404541015625" text="竞赛级别" />
+                        <TableColumn fx:id="typeColumn" prefWidth="71.33331298828125" text="竞赛类型" />
+                        <TableColumn fx:id="contestTimeColumn" prefWidth="102.66668701171875" text="参赛时间" />
+                        <TableColumn fx:id="instructorColumn" prefWidth="93.3333740234375" text="指导老师" />
+                        <TableColumn fx:id="positionColumn" minWidth="4.666748046875" prefWidth="79.333251953125" text="地点" />
+
+                    </columns></TableColumn>
+                <TableColumn prefWidth="161.99981689453125" text="操作">
+                    <columns>
+                        <TableColumn fx:id="editColumn" prefWidth="65.99993896484375" text="编辑" />
+                        <TableColumn fx:id="deleteColumn" prefWidth="86.0" text="删除" />
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+
+    </center>
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="112.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="76.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="112.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="72.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="113.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="69.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="66.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="95.33333333333326" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="61.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="16.0" prefWidth="102.0" text="查找搜索区域" GridPane.halignment="CENTER" />
+                <Label text="请选择学生" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Button stylesheets="@../css/button_blue.css" mnemonicParsing="false" onAction="#onQueryButtonClick" text="查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="新建竞赛经历" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                <Label text="竞赛名称" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                <Label text="获奖时间" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="竞赛级别" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                <Label text="竞赛类型" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="指导老师" GridPane.columnIndex="8" GridPane.halignment="CENTER" />
+                <Label text="参赛时间" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="所获奖项" GridPane.columnIndex="10" GridPane.halignment="CENTER" />
+                <Label text="地点" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Button stylesheets="@../css/button_purple.css" mnemonicParsing="false" onAction="#onNewButtonClick" text="创建" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <TextField fx:id="inputContestName" GridPane.columnIndex="5" />
+                <TextField fx:id="inputType" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                <TextField fx:id="inputInstructor" GridPane.columnIndex="9" />
+                <TextField fx:id="inputTime" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                <TextField fx:id="inputPrize" GridPane.columnIndex="11" />
+                <TextField fx:id="inputPosition" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                <DatePicker fx:id="timePicker" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <ComboBox fx:id="inputStudentComboBox" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <ComboBox fx:id="inputRankComboBox" prefWidth="150.0" GridPane.columnIndex="7" />
+                <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+    </top>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@css/general-format.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.StudentController">
+    <center>
+        <SplitPane>
+            <items>
+                <TableView stylesheets="css/table.css" fx:id="dataTableView" prefHeight="419.0" prefWidth="1192.0">
+                    <columns>
+
+                        <TableColumn fx:id="numColumn" prefWidth="100.0" text="学号" />
+                        <TableColumn fx:id="nameColumn" prefWidth="78.0000228881836" text="姓名" />
+                        <TableColumn fx:id="deptColumn" prefWidth="85.33329772949219" text="院系" />
+                        <TableColumn fx:id="majorColumn" prefWidth="122.66665649414062" text="专业" />
+                        <TableColumn fx:id="classNameColumn" prefWidth="47.0" text="班级" />
+                        <TableColumn fx:id="cardColumn" prefWidth="136.33340454101562" text="证件号码" />
+                        <TableColumn fx:id="genderColumn" prefWidth="54.0" text="性别" />
+                        <TableColumn fx:id="birthdayColumn" prefWidth="121.0" text="出生日期" />
+                        <TableColumn fx:id="emailColumn" prefWidth="191.6666259765625" text="邮箱" />
+                        <TableColumn fx:id="phoneColumn" prefWidth="183.6666259765625" text="电话" />
+                        <TableColumn fx:id="addressColumn" prefWidth="151.0" text="地址" />
+
+                    </columns>
+                </TableView>
+            </items>
+        </SplitPane>
+    </center>
+   <top>
+      <Pane prefHeight="61.0" prefWidth="1195.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onAction="#onEditButtonClick" styleClass="blue-theme" text="编辑个人信息" />
+            <Label layoutX="180.0" layoutY="21.0" text="亲爱的" />
+            <Label fx:id="ownName" layoutX="230.0" layoutY="21.0" text="名字 " />
+            <Label layoutX="278.0" layoutY="23.0" text="同学，您好！您的个人信息如下，选中自己并且点击左侧按钮可以修改编辑：" />
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="277.0" prefWidth="1195.0" BorderPane.alignment="CENTER">
+         <children>
+             <!--ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" >
+                 <Image url="" />" />
+             </ImageView-->
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

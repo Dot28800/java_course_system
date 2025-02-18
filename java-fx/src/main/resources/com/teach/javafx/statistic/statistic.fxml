@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.StatisticController">
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                      <Button layoutX="1.0" layoutY="110.0" mnemonicParsing="false" onAction="#queryByNumName" prefHeight="30.0" prefWidth="109.0" text="查询" />
+                  <Button layoutX="-1.0" layoutY="155.0" mnemonicParsing="false" onAction="#queryAndResetTable" prefHeight="23.0" prefWidth="108.0" text="刷新信息" />
+                  <TextField fx:id="numNameField" layoutX="1.0" layoutY="51.0" prefHeight="23.0" prefWidth="113.0" />
+                  <Label layoutX="22.0" layoutY="29.0" text="姓名/学号输入" />
+               </children>
+            </AnchorPane>
+            </children></VBox>
+    </left>
+    <center>
+        <TableView fx:id="dataTableView" minHeight="400.0" minWidth="400.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="numColumn" prefWidth="149.00003814697266" text="学号" />
+                <TableColumn fx:id="nameColumn" prefWidth="94.33329772949219" text="姓名" />
+                <TableColumn fx:id="sumFeeColumn" prefWidth="87.0" text="总消费" />
+                <TableColumn fx:id="GPAColumn" prefWidth="74.33331298828125" text="总绩点" />
+                <TableColumn fx:id="courseNumColumn" minWidth="20.0" prefWidth="102.00003051757812" text="已选择课程数" />
+                <TableColumn fx:id="disPassNumColumn" minWidth="20.0" prefWidth="93.3333740234375" text="未通过课程数" />
+            <TableColumn fx:id="practiceColumn" prefWidth="100.66656494140625" text="实践实习总数" />
+            <TableColumn fx:id="competitionColumn" prefWidth="90.0" text="参与竞赛次数" />
+            <TableColumn fx:id="dailyColumn" prefWidth="92.6666259765625" text="日常活动次数" />
+            <TableColumn fx:id="honorColumn" prefWidth="98.00002034505212" text="各类荣誉总数" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <PieChart prefHeight="150.0" prefWidth="256.0" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,30 @@
+
+@import "cf-colors.css";
+
+.cf-radio-button{
+    -fx-cursor:hand;
+}
+.cf-radio-button > .container{
+    -fx-text-fill: -cf-text-color;
+    -fx-font-size: 14px;
+    -fx-pref-height: 32px;
+}
+.cf-radio-button > .container > .box > .radio{
+    -fx-stroke: -cf-border-color;
+    -fx-fill: transparent;
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 1px;
+}
+.cf-radio-button > .container > .box > .dot{
+    -fx-fill: -cf-primary-color;
+    -fx-stroke-type: inside;
+}
+.cf-radio-button:focused > .container > .box > .radio{
+    -fx-stroke: -cf-primary-color;
+}
+.cf-radio-button:selected > .container{
+    -fx-text-fill: -cf-primary-color;
+}
+.cf-radio-button:selected > .container > .box > .radio{
+    -fx-stroke: -cf-primary-color;
+}

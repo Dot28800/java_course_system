@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.base.CourseAttendanceEditController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="231.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="231.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="231.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="231.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0000076293945" minWidth="10.0" prefWidth="369.66666666666663" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0000076293945" minWidth="10.0" prefWidth="369.66666666666663" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="26.0" prefWidth="45.0" text="学生" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label prefHeight="27.0" prefWidth="47.0" text="课程" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <ComboBox fx:id="courseComboBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label prefHeight="15.0" prefWidth="68.0" text="上课时间" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label prefHeight="21.0" prefWidth="48.0" text="到场情况" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <DatePicker fx:id="timePicker" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="flagBox" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <FlowPane columnHalignment="CENTER" prefHeight="111.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="59.0" prefWidth="200.0">
+               <children>
+                   <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#okButtonClick" text="确认" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                   <Button mnemonicParsing="false" onAction="#cancelButtonClick" text="取消" />
+               </children>
+            </HBox>
+         </children>
+      </FlowPane>
+   </children>
+</VBox>

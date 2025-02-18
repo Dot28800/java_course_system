@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- 用户登录对话框FXML配置文件 对应页面交互控制类 com.teach.javafx.controller.base.LoginController -->
+
+<VBox fx:id="vbox" alignment="CENTER" spacing="100.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.base.LoginController">
+    <padding>
+        <Insets bottom="100.0" left="60.0" right="60.0" top="70.0" />
+    </padding>
+    <HBox>
+        <ImageView fx:id="imageView" fitHeight="910.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/aoqi.jpg" />
+         </image></ImageView>
+        <GridPane prefHeight="344.0" prefWidth="1603.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="504.0" minWidth="100.0" prefWidth="500.5" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="500.5" minWidth="100.0" prefWidth="500.5" />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="100.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="100.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label style="-fx-font-size: 60px; -fx-text-fill: #3ac43a;" text="user:">
+                <GridPane.margin>
+                    <Insets right="0.000001" />
+                </GridPane.margin>
+            </Label>
+
+            <TextField fx:id="usernameField" style="-fx-font-size: 45px; -fx-text-fill: #275bbb;" GridPane.columnIndex="3" />
+            <Label style="-fx-font-size: 60px; -fx-text-fill: #d9164a;" text="password:" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets right="0.0000000001" />
+                </GridPane.margin>
+            </Label>
+            <PasswordField fx:id="passwordField" style="-fx-font-size: 45px; -fx-text-fill: #3c9bc4;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        </GridPane>
+    </HBox>
+    <Button fx:id="loginButton" onAction="#onLoginButtonClick" style="-fx-font-size: 90px" text="Login" />
+   <Button onAction="#loginByStudent" mnemonicParsing="false" text="使用学生账号登录">
+      <font>
+         <Font size="48.0" />
+      </font>
+   </Button>
+   <BorderPane prefHeight="200.0" prefWidth="200.0" />
+</VBox>

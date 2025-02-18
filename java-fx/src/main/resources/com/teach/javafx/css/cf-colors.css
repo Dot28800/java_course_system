@@ -1,0 +1,14 @@
+
+/*颜色*/
+
+*{
+    -cf-primary-color: #6690FF;
+    -cf-success-color: #33C651;
+    -cf-info-color: #52A8F9;
+    -cf-warn-color: #FFA10A;
+    -cf-danger-color: #FF4C3F;
+
+    -cf-text-color:#303133;
+    -cf-border-color:#CDD0D6;
+    -cf-base-color:#F2F3F5;
+}

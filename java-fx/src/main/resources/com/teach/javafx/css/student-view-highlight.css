@@ -1,0 +1,12 @@
+.search:pressed
+{
+  -fx-background-color: #7156DD;
+}
+.search
+{
+  -fx-background-color: rgb(255,255,255);
+}
+.search
+{
+-fx-background-radius:20 20 20 20;
+}

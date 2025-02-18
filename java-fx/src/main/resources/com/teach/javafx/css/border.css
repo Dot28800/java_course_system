@@ -1,0 +1,35 @@
+.border{
+    -fx-border-color:#E5E5E5;
+    -fx-border-width:10px;
+    -fx-border-radius:20px 20px 20px 20px;
+    -fx-background-color:#FFFFFF;
+}
+.pane_1{
+    -fx-background-color:#748CF1;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-border-style:solid;
+    -fx-border-color:#748CF1;
+}
+
+.pane_2{
+    -fx-background-color:#FB9B92;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-border-style:solid;
+    -fx-border-color:#FB9B92;
+}
+
+.pane_3{
+    -fx-background-color:#313953;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-border-style:solid;
+    -fx-border-color:#313953;
+}
+
+
+

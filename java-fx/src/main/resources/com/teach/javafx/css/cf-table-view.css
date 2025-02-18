@@ -1,0 +1,81 @@
+
+@import "cf-colors.css";
+
+.cf-table{
+    -fx-border-color: -cf-border-color;
+    -fx-border-radius: 3px;
+}
+.cf-table-view{
+    -fx-background-insets: 0;
+    -fx-padding:0px;
+    /*-fx-border-color: -cf-border-color;*/
+    /*-fx-border-width: 1px;*/
+    -fx-font-size: 14px;
+    /*-fx-border-radius: 3px;*/
+    -fx-background-radius: 3px;
+    -fx-background-color: transparent;
+}
+.cf-table-view > .column-header-background{
+    -fx-background-color: transparent;
+    /*-fx-background-color:rgba(0,0,0,0.05);*/
+}
+.cf-table-view .column-header{
+    -fx-background-color: transparent;
+    -fx-pref-height:36px;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color:-cf-border-color;
+}
+.cf-table-view .column-header:last-visible{
+    -fx-border-width: 0 0px 1px 0;
+}
+.cf-table-view .column-header .label {
+    -fx-alignment: center-left;
+    -fx-text-fill: -cf-text-color;
+    -fx-padding: 0 5px 0 5px;
+}
+.cf-table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled:hover{
+    -fx-background-color: rgba(0,0,0,0.04);
+}
+.cf-table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled:selected{
+    -fx-background-color: rgba(0,0,0,0.08);
+}
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled:selected > .table-cell{
+    -fx-text-fill: -cf-text-color;
+}
+.cf-table-view .table-row-cell {
+    -fx-min-height:36px;
+    -fx-background-insets: 0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color:transparent;
+}
+.cf-table-view .table-cell {
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color:transparent;
+    -fx-alignment: center-left;
+    -fx-padding: 0 5px 0 5px;
+}
+.cf-table-view .table-cell:last-visible{
+    -fx-border-width: 0;
+}
+.cf-table-view .table-row-cell:even {
+    -fx-background-color: transparent;
+}
+.cf-table-view .table-row-cell:odd {
+    /*-fx-background-color: rgba(0,0,0,0.02);*/
+    -fx-background-color: transparent;
+}
+.cf-table-view .table-cell:empty {
+    -fx-border-width: 0px;
+}
+.cf-table-view .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-background-insets: 0;
+}
+/*分页容器*/
+.cf-table > .pagination-container{
+    -fx-border-color: -cf-border-color;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 10px;
+    -fx-alignment: center-right;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.CompetitionTableController">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="209.3333181142807" text="学生信息">
+                    <columns>
+                        <TableColumn fx:id="studentNameColumn" prefWidth="79.3333410024643" text="姓名" />
+                        <TableColumn fx:id="studentNumColumn" prefWidth="122.00000762939453" text="学号" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="880.6666412353516" text="竞赛经历信息">
+                    <columns>
+                        <TableColumn fx:id="contestNameColumn" prefWidth="186.66664123535156" text="竞赛名称" />
+                        <TableColumn fx:id="prizeColumn" prefWidth="162.00003051757812" text="所获奖项" />
+                        <TableColumn fx:id="rankColumn" prefWidth="59.333404541015625" text="竞赛级别" />
+                        <TableColumn fx:id="typeColumn" prefWidth="71.33331298828125" text="竞赛类型" />
+                        <TableColumn fx:id="contestTimeColumn" prefWidth="102.66668701171875" text="参赛时间" />
+                        <TableColumn fx:id="instructorColumn" prefWidth="93.3333740234375" text="指导老师" />
+                        <TableColumn fx:id="positionColumn" minWidth="4.666748046875" prefWidth="79.3333740234375" text="地点" />
+
+                    </columns></TableColumn>
+            </columns>
+        </TableView>
+
+
+    </center>
+    <top>
+        <GridPane prefHeight="60.0" prefWidth="1030.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.66668701171875" minWidth="10.0" prefWidth="151.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.33333333333337" minWidth="10.0" prefWidth="166.00001017252603" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="782.6666564941406" minWidth="10.0" prefWidth="782.6666564941406" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="16.0" prefWidth="102.0" text="查找搜索区域" GridPane.halignment="CENTER" />
+                <Button mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="23.0" prefWidth="98.0" styleClass="button" stylesheets="@../css/button_orange.css" text="查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <ComboBox fx:id="inputRankComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label layoutY="8.0" text="亲爱的" />
+                  <Label fx:id="name" layoutX="50.0" layoutY="9.0" text="学生名" />
+                  <Label layoutX="93.0" layoutY="9.0" text="同学，这里是您的竞赛经历" />
+               </children>
+            </AnchorPane>
+            </children>
+        </GridPane>
+    </top>
+</BorderPane>

@@ -1,0 +1,44 @@
+
+@import "cf-colors.css";
+
+.cf-text-field > .box{
+    -fx-pref-width: 220px;
+    -fx-pref-height: 32px;
+    -fx-padding: 0px 8px;
+    -fx-spacing: 6px;
+    -fx-alignment: center;
+    -fx-border-radius: 3px;
+    -fx-border-color: -cf-border-color;
+}
+.cf-text-field:focused > .box{
+    -fx-border-color: -cf-primary-color;
+}
+.cf-text-field > .box > .text-field,
+.cf-text-field > .box > .password-field{
+    -fx-padding: 0px;
+    -fx-text-fill: -cf-text-color;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+    -fx-background-insets:0;
+    -fx-background-color: rgba(190, 18, 18, 0);
+    -fx-highlight-fill: -cf-primary-color;
+}
+.cf-text-field > .box > .prefix-label > .ikonli-font-icon{
+    -fx-icon-size: 20px;
+    -fx-icon-color: -cf-border-color;
+}
+.cf-text-field:focused > .box > .prefix-label > .ikonli-font-icon{
+    -fx-icon-color: -cf-primary-color;
+}
+.cf-text-field > .box > .suffix-label > .ikonli-font-icon{
+    -fx-icon-size: 20px;
+    -fx-icon-color: rgba(0,0,0,0.2);
+}
+.cf-text-field > .box > .clear-icon{
+    -fx-icon-size: 15px;
+    -fx-icon-color: rgba(0,0,0,0.2);
+}
+.cf-text-field > .box > .clear-icon:hover,
+.cf-text-field > .box > .suffix-label:hover > .ikonli-font-icon{
+    -fx-icon-color: rgba(0,0,0,0.4);
+}

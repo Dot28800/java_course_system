@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.RankController"
+stylesheets="@../css/button.css">
+   <center>
+      <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="547.0" prefWidth="481.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="numColumn" prefWidth="115.0" text="学号" />
+          <TableColumn fx:id="nameColumn" prefWidth="93.33336639404297" text="姓名" />
+            <TableColumn fx:id="markColumn" prefWidth="75.33332824707031" text="平均成绩" />
+            <TableColumn fx:id="GPAColumn" prefWidth="78.66668701171875" text="平均 绩点" />
+            <TableColumn fx:id="rankColumn" prefWidth="67.0" text="总排名" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox prefHeight="547.0" prefWidth="307.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="92.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.99998474121094" minWidth="10.0" prefWidth="192.99998474121094" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="1.0000152587890625" prefWidth="1.0000152587890625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="学生学号/姓名" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="numNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button stylesheets="@../css/button_purple.css" mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="23.0" prefWidth="180.0" text="按照学号姓名查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="排名精确查找" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <TextField fx:id="rankField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button stylesheets="@../css/button_green.css" mnemonicParsing="false" onAction="#queryByRank" prefHeight="23.0" prefWidth="181.0" text="查找排名对应学生" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#refresh" text="一键刷新" GridPane.halignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

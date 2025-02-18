@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1140.0"
+            stylesheets="@../css/general-format.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.LeaveTableController">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="查找搜索区域" GridPane.halignment="CENTER" />
+                <Label text="请选择学生" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                <ComboBox fx:id="inputStudentComboBox" prefWidth="150.0" GridPane.columnIndex="3" />
+                <ComboBox fx:id="studentComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+                <Label text="请假原因" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="是否批准" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="离开时间" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                <Label text="返回时间" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label text="请假去向" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                <Button mnemonicParsing="false" onAction="#onQueryButtonClick" styleClass="green-theme" text="查找" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Button mnemonicParsing="false" onAction="#onNewButtonClick" styleClass="blue-theme" text="创建" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <DatePicker fx:id="leaveTimePicker" GridPane.columnIndex="5" />
+                <DatePicker fx:id="returnTimePicker" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <TextField fx:id="inputDestination" GridPane.columnIndex="7" />
+                <TextField fx:id="inputLeaveReason" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <ComboBox fx:id="inputFlagComboBox" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onAllAgreeButton" styleClass="purple-theme" text="一键批准" GridPane.columnIndex="8" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#filter" styleClass="red-time" text="过滤已批准记录" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <TableView fx:id="dataTableView" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/newTable.css" BorderPane.alignment="CENTER">
+            <columns>
+                <!--TableColumn prefWidth="204.00003564357758" text="学生信息">
+                    <columns-->
+                        <TableColumn fx:id="studentNumColumn" prefWidth="128.33334096272802" text="学号" />
+                        <TableColumn fx:id="studentNameColumn" prefWidth="108.99999237060547" text="姓名" />
+                    <!--/columns></TableColumn-->
+                <!--TableColumn prefWidth="418.66668701171875" text="请假记录信息">
+                    <columns-->
+                        <TableColumn fx:id="leaveReasonColumn" prefWidth="105.33335876464844" text="请假原因" />
+                        <TableColumn fx:id="leaveTimeColumn" prefWidth="112.33334350585938" text="离开时间" />
+                        <TableColumn fx:id="returnTimeColumn" prefWidth="108.99996948242188" text="返回时间" />
+                        <TableColumn fx:id="destinationColumn" prefWidth="177.0" text="请假去向" />
+                        <TableColumn fx:id="flagColumn" prefWidth="87.3333740234375" text="是否批准" />
+                    <!--/columns>
+                </TableColumn-->
+                <!--TableColumn prefWidth="75.0" text="操作">
+                    <columns-->
+                        <TableColumn fx:id="editColumn" prefWidth="85.3333740234375" text="编辑" />
+                        <TableColumn fx:id="deleteColumn" prefWidth="71.33331298828125" text="删除" />
+            <TableColumn fx:id="agreeColumn" prefWidth="76.99993896484375" text="批准" />
+            <TableColumn fx:id="negateColumn" prefWidth="74.3333740234375" text="批否" />
+                    </columns>
+                <!--/TableColumn>
+            </columns-->
+        </TableView>
+    </center>
+</BorderPane>

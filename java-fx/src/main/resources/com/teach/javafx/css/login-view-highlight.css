@@ -1,0 +1,25 @@
+.button
+{
+  -fx-background-color: #0598ff;
+}
+.button:hover
+{
+  -fx-background-color: rgb(5,152,255,0.5);
+}
+.button:pressed
+{
+  -fx-background-color: rgb(5,152,255,0.5);
+}
+
+.button1
+{
+  -fx-background-color: transparent;
+}
+.button1:hover
+{
+  -fx-background-color: rgb(5,152,255,0.5);
+}
+.button1:pressed
+{
+  -fx-background-color: rgb(5,152,255,0.5);
+}

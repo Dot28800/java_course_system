@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.HomeworkTableController">
+    <right>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="310.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="studentNumColumn" prefWidth="96.66662347316742" text="学生学号" />
+                <TableColumn fx:id="studentNameColumn" prefWidth="105.33338165283203" text="学生姓名" />
+                <TableColumn fx:id="courseNumColumn" prefWidth="78.66667175292969" text="课程号" />
+                <TableColumn fx:id="courseNameColumn" prefWidth="98.6666259765625" text="课程名" />
+                <TableColumn fx:id="timeColumn" prefWidth="103.33331298828125" text="布置时间" />
+                <TableColumn fx:id="markColumn" prefWidth="116.66677856445312" text="作业分数" />
+            </columns>
+        </TableView>
+    </right>
+   <top>
+      <AnchorPane prefHeight="107.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutY="24.0" text="Hi，亲爱的" />
+            <Label fx:id="studentName" layoutX="75.0" layoutY="24.0" text="学生名字" />
+            <Label layoutX="140.0" layoutY="24.0" text="同学，这里是您历次作业反馈情况，请查收" />
+            <Label layoutX="14.0" layoutY="77.0" text="温馨提示：由于权限的限制，您只能查看自己的作业但是无法修改它们，如有问题请尽快联系老师" />
+            <ComboBox fx:id="courseComboBox" layoutX="422.0" layoutY="20.0" prefWidth="150.0" />
+            <Button layoutX="330.0" layoutY="49.0" mnemonicParsing="false" onAction="#onQueryButtonClick" prefHeight="28.0" prefWidth="238.0" styleClass="button" stylesheets="@../css/button_green.css" text="点击我按照课程筛选" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

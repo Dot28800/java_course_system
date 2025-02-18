@@ -1,0 +1,22 @@
+.button:hover
+{
+  -fx-background-color: #7C7C7C;
+  -fx-background-color: rgba(125, 46, 164, 0.49);
+}
+.button:pressed
+{
+-fx-background-color: transparent;
+}
+
+.button
+{
+
+  -fx-background-color: rgba(120, 225, 201, 0.49); /* 设置按钮的背景颜色 */
+  -fx-text-fill: black; /* 设置按钮文本的颜色 */
+  -fx-font-size: 12px; /* 设置按钮文本的字体大小 */
+  -fx-padding: 5px 10px; /* 设置按钮内边距 */
+  -fx-background-radius: 5px; /* 设置按钮的圆角半径 */
+  margin: 8px;
+  -fx-border-color: black;
+  -fx-border-radius: 5;
+}

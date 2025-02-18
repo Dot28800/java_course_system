@@ -1,0 +1,16 @@
+
+@import "cf-colors.css";
+
+.header > .title{
+    -fx-font-size: 16px;
+    -fx-font-weight: 400;
+    -fx-text-fill: -cf-text-color;
+}
+.header > .close{
+    -fx-icon-size: 15px;
+    -fx-icon-color: derive(-cf-text-color,30%);
+    -fx-cursor:hand;
+}
+.header > .close:hover{
+    -fx-icon-color: -cf-text-color;
+}

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<!-- 学生个人简历界面 FXML配置文件 对应页面交互控制类 com.teach.javafx.controller.StudentIntroduceController -->
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.ResumeController">
+   <content>
+      <BorderPane prefHeight="1000.0" prefWidth="1169.0">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#onIntroduceDownloadClick" text="导出为PDF" />
+                  <Button mnemonicParsing="false" onAction="#onPhotoButtonClick" text="导入个人照片" />
+                  <Button mnemonicParsing="false" onAction="#onSubmitButtonClick" text="保存修改" />
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <VBox prefHeight="676.0" prefWidth="703.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" layoutX="39.0" prefHeight="67.0" prefWidth="722.0" text="学生个人简历">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="110.0" prefWidth="1100.0">
+                     <children>
+                        <GridPane prefHeight="105.0" prefWidth="897.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.33331298828125" minWidth="10.0" prefWidth="53.666676839192704" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.33334350585938" minWidth="10.0" prefWidth="54.66666666666666" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.33334350585938" minWidth="10.0" prefWidth="212.0000203450521" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.66666666666663" minWidth="10.0" prefWidth="106.66664632161456" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.66666666666663" minWidth="6.666646321614564" prefWidth="122.66666666666669" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.33333333333337" minWidth="10.0" prefWidth="80.66666666666669" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.33333333333326" minWidth="10.0" prefWidth="177.000020345052" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="姓名" GridPane.columnIndex="1" />
+                              <Label text="出生日期" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="证件号" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="专业" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label text="生源地" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Label text="政治面貌" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label text="性别" GridPane.columnIndex="5" />
+                              <Label text="邮箱号" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="担任职务" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <Label text="年龄" GridPane.columnIndex="3" />
+                              <Label text="住址" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <Label text="电话" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Label fx:id="name" text="姓名属性" GridPane.columnIndex="2" />
+                              <Label fx:id="birthday" text="生日属性" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="card" text="证件号属性" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="email" text="邮箱属性" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label fx:id="age" text="年龄属性" GridPane.columnIndex="4" />
+                              <!--Label fx:id="dept" text="专业属性" GridPane.columnIndex="4" GridPane.rowIndex="1" /-->
+                              <Label fx:id="politics" text="政治面貌属性" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <Label fx:id="province" text="生源地属性" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <Label fx:id="gender" text="性别属性" GridPane.columnIndex="6" />
+                              <Label fx:id="phone" text="电话号属性" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <Label fx:id="job" text="职务属性" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <Label fx:id="address" text="住址属性" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <Label fx:id="major" text="专业属性" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <AnchorPane layoutX="911.0" layoutY="-57.0" prefHeight="168.0" prefWidth="157.0">
+                           <children>
+                              <!--ImageView fx:id="photoImageView" fitHeight="163.0" fitWidth="150.0" layoutX="583.0" layoutY="-76.0" pickOnBounds="true" preserveRatio="true" /-->
+                               <Button fx:id="photoButton" layoutX="24.0" layoutY="-1.0" onAction="#onPhotoButtonClick" prefHeight="163.0" prefWidth="135.0" styleClass="border_black_1" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <HTMLEditor fx:id="introduceHtml" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="30.0" prefHeight="167.0" prefWidth="595.0" />
+                        <Label layoutX="14.0" layoutY="2.0" text="自我介绍">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink layoutX="120.0" layoutY="1.0" onAction="#gotoWeb" prefHeight="24.0" prefWidth="127.0" text="点击前往个人主页">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Hyperlink>
+                        <Label layoutX="619.0" layoutY="2.0" text="社会实践/科研经历">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView layoutX="627.0" layoutY="27.0" prefHeight="173.0" prefWidth="523.0" />
+                        <GridPane layoutX="626.0" layoutY="28.0" prefHeight="171.0" prefWidth="524.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.6666259765625" minWidth="10.0" prefWidth="68.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.66668701171875" minWidth="10.0" prefWidth="55.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="171.00000000000003" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.00008138020831" minWidth="10.0" prefWidth="129.33333333333331" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.6666259765625" minWidth="10.0" prefWidth="73.33333333333337" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="时间" GridPane.halignment="CENTER" />
+                              <Label text="类型" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <Label text="主要内容" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Label text="个人在其中作用" GridPane.columnIndex="3" />
+                              <Label alignment="CENTER" text="反馈评价" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                              <Label text="2023.2.5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Label text="实践活动" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="寒假回母校宣讲" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="主讲人" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label text="优秀" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Label text="2024.2.21" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Label text="实践活动" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="“寻秦迹”陕西寻访实践活动" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text="小队成员" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label text="良好" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <Label text="2023.9.25" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Label text="科研论文" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="论文《青年科技》发表在期刊上" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="第二作者" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Label text="优秀" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="230.0" prefWidth="1115.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="2.0" text="个人成绩信息">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <TableView stylesheets="@../css/mytable.css" fx:id="scoreTable" layoutX="108.0" layoutY="41.0" prefHeight="157.0" prefWidth="363.0">
+                          <columns>
+                            <TableColumn fx:id="courseNumColumn" prefWidth="80.66665661334991" text="课程号" />
+                            <TableColumn fx:id="courseNameColumn" prefWidth="70.0" text="课程名" />
+                              <TableColumn fx:id="markColumn" prefWidth="68.6666259765625" text="成绩" />
+                              <TableColumn fx:id="GPAColumn" prefWidth="62.66668701171875" text="绩点" />
+                              <TableColumn fx:id="rankingColumn" prefWidth="75.99993896484375" text="单科排名" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="130.0" layoutY="6.0" text="个人总体均分：" />
+                        <Label layoutX="273.0" layoutY="6.0" text="个人均绩：" />
+                        <Label layoutX="388.0" layoutY="6.0" text="专业排名：" />
+                        <Label fx:id="avgMark" layoutX="226.0" layoutY="6.0" text="均分" />
+                        <Label fx:id="avgGPA" layoutX="333.0" layoutY="7.0" text="军妓" />
+                        <Label fx:id="totalRank" layoutX="448.0" layoutY="6.0" text="排名" />
+                        <WebView fx:id="webView" layoutX="1084.0" layoutY="234.0" prefHeight="13.0" prefWidth="3.0" />
+                        <PieChart fx:id="pieChart" layoutX="510.0" layoutY="10.0" prefHeight="219.0" prefWidth="356.0" />
+                        <Label layoutX="883.0" layoutY="49.0" text="累计实习次数：2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="883.0" layoutY="88.0" text="累计志愿时长：23.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="883.0" layoutY="131.0" text="参与竞赛次数：5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="364.0" prefWidth="1115.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="荣誉事迹">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView stylesheets="@../css/newTable.css"  fx:id="honorTable" layoutX="484.0" layoutY="26.0" prefHeight="206.0" prefWidth="659.0">
+                          <columns>
+                            <TableColumn fx:id="honorTitle" prefWidth="268.6666564941406" text="荣誉名称" />
+                            <TableColumn fx:id="honorTime" prefWidth="126.0" text="获奖时间" />
+                              <TableColumn fx:id="honorHost" prefWidth="180.6666259765625" text="颁奖单位" />
+                              <TableColumn fx:id="honorLevel" prefWidth="83.3333740234375" text="级别" />
+                          </columns>
+                        </TableView>
+                        <StackedBarChart fx:id="stackedBarChart" layoutX="75.0" layoutY="26.0" prefHeight="231.0" prefWidth="385.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </StackedBarChart>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

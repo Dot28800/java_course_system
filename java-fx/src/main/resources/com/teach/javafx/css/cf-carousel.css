@@ -1,0 +1,41 @@
+
+@import "cf-colors.css";
+
+.cf-carousel > .container > .tool-pane{
+    -fx-padding: 10px;
+}
+.cf-carousel > .container > .tool-pane > .left-button,
+.cf-carousel > .container > .tool-pane > .right-button{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: rgba(0,0,0,0.2);
+    -fx-pref-height: 32px;
+    -fx-pref-width: 32px;
+    -fx-background-radius: 16px;
+    -fx-cursor: hand;
+}
+.cf-carousel > .container > .tool-pane > .left-button:hover,
+.cf-carousel > .container > .tool-pane > .right-button:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+.cf-carousel > .container > .tool-pane > .left-button > .ikonli-font-icon,
+.cf-carousel > .container > .tool-pane > .right-button > .ikonli-font-icon{
+    -fx-icon-size: 15px;
+    -fx-icon-color: rgba(255, 255, 255,0.8);
+}
+.cf-carousel > .container > .tool-pane > .indicator{
+    -fx-spacing: 4px;
+}
+.cf-carousel > .container > .tool-pane > .indicator >.toggle-button{
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 12px;
+    -fx-pref-width: 20px;
+    -fx-background-radius: 0;
+    -fx-background-insets: 5px 0 5px 0;
+    -fx-background-color: rgba(255,255,255,0.6);
+    -fx-cursor: hand;
+}
+.cf-carousel > .container > .tool-pane > .indicator >.toggle-button:selected{
+    -fx-background-color: rgb(255,255,255);
+}

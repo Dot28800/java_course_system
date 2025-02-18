@@ -1,0 +1,18 @@
+
+@import "cf-colors.css";
+
+.cf-notification{
+    -fx-padding: 25px;
+    -fx-min-width: 400px;
+    -fx-max-width: 500px;
+    -fx-min-height: 150px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10.0, 0, 0, 0);
+    -fx-background-color: rgba(255,255,255);
+    -fx-background-radius: 2px;
+    -fx-background-insets: 10px;
+}
+.cf-notification > .text-label{
+    -fx-font-size: 14px;
+    -fx-text-fill: -cf-text-color;
+    -fx-wrap-text: true;
+}

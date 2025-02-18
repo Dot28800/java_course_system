@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.base.LoginController">
+    <left>
+        <AnchorPane prefHeight="600.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="350.0" fitWidth="359.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../picture/春.jpg" />
+                </ImageView>
+                <ImageView fitHeight="238.0" fitWidth="360.0" layoutX="2.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../picture/夏.jpg" />
+                </ImageView>
+            </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="289.0" fitWidth="196.0" layoutX="78.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../picture/秋.jpg" />
+
+                </ImageView>
+                <ImageView fitHeight="209.0" fitWidth="310.0" layoutX="11.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../picture/冬.jpg" />
+                </ImageView>
+            </children></AnchorPane>
+    </right>
+    <center>
+        <VBox prefHeight="600.0" prefWidth="659.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="600.0" prefWidth="417.0">
+                    <children>
+                        <Label layoutX="114.0" layoutY="31.0" prefHeight="47.0" prefWidth="212.0" text="学生管理系统" textAlignment="CENTER" textFill="#60c7a0">
+                            <font>
+                                <Font size="32.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="74.0" layoutX="31.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../picture/user.png" />
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="73.0" layoutX="31.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../picture/key1.png" />
+                        </ImageView>
+                        <ImageView fitHeight="90.0" fitWidth="88.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../picture/11.png" />
+                        </ImageView>
+                        <ImageView fitHeight="79.0" fitWidth="93.0" layoutX="326.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../picture/cube.png" />
+                        </ImageView>
+                  <TextField fx:id="usernameField" layoutX="138.0" layoutY="147.0" prefHeight="39.0" prefWidth="211.0" promptText="User Name or Number" styleClass="textField" stylesheets="@../css/loginTextField.css" />
+                  <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#forgetPassword" styleClass="button1" stylesheets="@../css/login-view-highlight.css" text="忘记密码？" textFill="#3045cc">
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font></Button>
+                  <PasswordField fx:id="passwordField" layoutX="138.0" layoutY="245.0" prefHeight="36.0" prefWidth="214.0" promptText="Password" styleClass="textField" stylesheets="@../css/loginTextField.css" />
+                        <MFXButton layoutX="38.0" layoutY="428.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="57.0" prefWidth="132.0" style="-fx-background-color: #0598ff;" text="按照管理员登录" textFill="WHITE">
+                            <font>
+                                <Font name="Consolas" size="14.0" />
+                            </font>
+                        </MFXButton>
+                  <MFXButton layoutX="210.0" layoutY="431.0" mnemonicParsing="false" onAction="#loginByStudent" prefHeight="51.0" prefWidth="155.0" style="-fx-background-color: #0598ff;" text="使用学生账号登录" textFill="WHITE" />
+                        <ImageView fitHeight="55.0" fitWidth="75.0" layoutX="41.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../picture/attendance.png" />
+                        </ImageView>
+                  <ImageView fx:id="yzm" fitHeight="86.0" fitWidth="111.0" layoutX="283.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="yzmField" layoutX="138.0" layoutY="324.0" prefHeight="39.0" prefWidth="134.0" promptText="Captcha" styleClass="textField" stylesheets="@../css/loginTextField.css" />
+                  <Button onAction="#shuaxin" layoutX="283.0" layoutY="391.0" mnemonicParsing="false" styleClass="button1" stylesheets="@../css/login-view-highlight.css" text="看不清？换一张！" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

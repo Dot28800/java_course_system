@@ -1,0 +1,14 @@
+
+@import "cf-colors.css";
+
+.cf-badge{
+    -fx-alignment: center;
+    -fx-padding: 0px 2px;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-font-size: 12px;
+    -fx-pref-height: 15px;
+    -fx-min-width: 14px;
+    -fx-background-radius: 3px;
+    -fx-background-insets:0;
+    -fx-background-color: -cf-danger-color;
+}

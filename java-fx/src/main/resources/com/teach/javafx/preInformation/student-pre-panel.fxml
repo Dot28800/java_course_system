@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafx.controller.PreInformationController">
+    <center>
+        <TableView stylesheets="@../css/table.css" fx:id="dataTableView" prefHeight="407.0" prefWidth="268.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="studentNumColumn" prefWidth="106.6666589975357" text="学生学号" />
+                <TableColumn fx:id="studentNameColumn" prefWidth="62.666648864746094" text="学生姓名" />
+                <TableColumn fx:id="genderColumn" prefWidth="43.66668701171875" text="性别" />
+                <TableColumn fx:id="ageColumn" prefWidth="47.00001525878906" text="年龄" />
+                <TableColumn fx:id="sourcePlaceColumn" prefWidth="67.66670227050781" text="生源地" />
+                <TableColumn fx:id="preSchoolColumn" prefWidth="176.6666259765625" text="毕业高中" />
+                <TableColumn fx:id="preScoreColumn" prefWidth="79.99996948242188" text="高考成绩" />
+                <TableColumn fx:id="preRankColumn" minWidth="0.0" prefWidth="87.33331298828125" text="省位次号" />
+                <TableColumn fx:id="preHonorColumn" prefWidth="252.6666259765625" text="曾获荣誉" />
+                <TableColumn fx:id="editColumn" prefWidth="81.0" text="操作" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox prefHeight="213.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+    </bottom>
+   <top>
+      <AnchorPane prefHeight="58.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="亲爱的同学，这里记录了您的过去，您可以修改它们但无法抹去" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

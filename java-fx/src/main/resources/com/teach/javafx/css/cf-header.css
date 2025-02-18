@@ -1,0 +1,46 @@
+
+@import "cf-colors.css";
+
+.cf-header{
+    -fx-padding: 10px 5px;
+    -fx-spacing: 5px;
+/*    -fx-background-color: #EBEDF0;*/
+/*    -fx-border-color: -cf-border-color;
+    -fx-border-width: 0 0 1px 0;*/
+}
+.cf-header > .button-box{
+    -fx-spacing: 5px;
+}
+.cf-header > .button-box > .iconified-but,
+.cf-header > .button-box > .maximize-but,
+.cf-header > .button-box > .close-but{
+    -fx-padding:0px;
+    -fx-pref-width:20px;
+    -fx-pref-height:20px;
+    -fx-background-radius:10px;
+    -fx-background-insets:0;
+    -fx-background-color:rgba(0,0,0,0.25);
+    /*-fx-cursor:hand;*/
+}
+.cf-header > .button-box > .close-but{
+    -fx-background-color:-cf-danger-color;
+}
+.cf-header > .button-box > .iconified-but > .ikonli-font-icon,
+.cf-header > .button-box > .maximize-but > .ikonli-font-icon,
+.cf-header > .button-box > .close-but > .ikonli-font-icon{
+    -fx-icon-size:14px;
+    -fx-icon-color: transparent;
+}
+.cf-header > .button-box > .close-but > .ikonli-font-icon{
+    -fx-icon-size:14px;
+}
+.cf-header > .button-box > .iconified-but:pressed,
+.cf-header > .button-box > .maximize-but:pressed,
+.cf-header > .button-box > .close-but:pressed{
+    -fx-opacity: 0.8;
+}
+.cf-header > .button-box > .iconified-but:hover > .ikonli-font-icon,
+.cf-header > .button-box > .maximize-but:hover > .ikonli-font-icon,
+.cf-header > .button-box > .close-but:hover > .ikonli-font-icon{
+    -fx-icon-color: rgb(255,255,255);
+}

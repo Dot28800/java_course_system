@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+title UML类图（完成阶段）
+scale 1.8
+class Person
+class Student
+class FamilyMember
+
+class Course
+class CourseAttendance
+class CourseChoose
+class PreInformation
+class HomeWork
+class User
+class UserType
+class Mark
+class Score
+class Rank
+class Practice
+class Science
+class Competition
+class Honor
+class Daily
+class Leave
+class Consumption
+User..>Person
+User..>UserType
+Student ..> Person
+FamilyMember ..> Student
+PreInformation..>Student
+Science..>Student
+Competition..>Student
+Practice..>Student
+Honor..>Student
+Daily.>Student
+Leave..>Student
+Consumption..>Student
+CourseChoose..>Course
+CourseChoose..>Student
+CourseAttendance..>Student
+CourseAttendance..>Course
+HomeWork..>CourseChoose
+Mark..>CourseChoose
+Mark..>Score
+Mark..>HomeWork
+Score..>Student
+Score..>Course
+Rank..>Student
+Rank..>Mark
+
+
+@enduml

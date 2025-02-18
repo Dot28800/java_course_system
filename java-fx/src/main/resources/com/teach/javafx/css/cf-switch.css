@@ -1,0 +1,18 @@
+
+@import "cf-colors.css";
+
+.cf-switch{
+    -cf-color: #A8ABB2;
+    -fx-cursor: hand;
+}
+.cf-switch > .container{
+    -fx-text-fill: -cf-text-color;
+    -fx-font-size: 14px;
+    -fx-pref-height: 32px;
+}
+.cf-switch:selected{
+    -cf-color: -cf-primary-color;
+}
+.cf-switch:selected > .container{
+    -fx-text-fill: -cf-primary-color;
+}
